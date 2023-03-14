@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;en&quot;,&quot;default&quot;]" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>巍的博客 | 巍的博客</title><meta name="author" content="巍"><meta name="copyright" content="巍"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="“.tar”格式的打包和解打包都使用 tar 命令，区别只是选项不同。我们先看看 tar 命令的基本信息。  命令名称：tar。 英文原意：tar。 所在路径：&#x2F;bin&#x2F;tar。 执行权限：所有用户。 功能描述：打包与解打包命令。  打包命令格式[root@localhost ~]#tar [选项] [-f 压缩包名] 源文件或目录  选项：  -c：打包； -f：指定压缩包的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="巍的博客">
+<meta property="og:url" content="http://example.com/2023/03/10/linux%20learning/tar%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AE%B2%E8%A7%A3%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="巍的博客">
+<meta property="og:description" content="“.tar”格式的打包和解打包都使用 tar 命令，区别只是选项不同。我们先看看 tar 命令的基本信息。  命令名称：tar。 英文原意：tar。 所在路径：&#x2F;bin&#x2F;tar。 执行权限：所有用户。 功能描述：打包与解打包命令。  打包命令格式[root@localhost ~]#tar [选项] [-f 压缩包名] 源文件或目录  选项：  -c：打包； -f：指定压缩包的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/bg%2008.jpg">
+<meta property="article:published_time" content="2023-03-10T01:10:07.964Z">
+<meta property="article:modified_time" content="2023-03-04T10:20:03.304Z">
+<meta property="article:author" content="巍">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="tar">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/bg%2008.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/03/10/linux%20learning/tar%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AE%B2%E8%A7%A3%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?78b0555b46faae03db1e33267d753eb9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '巍的博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-04 18:20:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.postimg.cc/CK6xkn3v/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-podcast"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/./img/bg%2008.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="巍的博客"><img class="site-icon" src="/./img/icon.png"/><span class="site-name">巍的博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-podcast"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-10T01:10:07.964Z" title="发表于 2023-03-10 09:10:07">2023-03-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-04T10:20:03.304Z" title="更新于 2023-03-04 18:20:03">2023-03-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>“.tar”格式的打包和解打包都使用 tar 命令，区别只是选项不同。我们先看看 tar 命令的基本信息。</p>
+<ul>
+<li>命令名称：tar。</li>
+<li>英文原意：tar。</li>
+<li>所在路径：&#x2F;bin&#x2F;tar。</li>
+<li>执行权限：所有用户。</li>
+<li>功能描述：打包与解打包命令。</li>
+</ul>
+<h2 id="打包命令格式"><a href="#打包命令格式" class="headerlink" title="打包命令格式"></a>打包命令格式</h2><p><code>[root@localhost ~]#tar [选项] [-f 压缩包名] 源文件或目录</code></p>
+<blockquote>
+<p>选项：</p>
+<ul>
+<li>-c：打包；</li>
+<li>-f：指定压缩包的文件名。压缩包的扩展名是用来给管理员识别格式的，所以一定要正确指定扩展名；</li>
+<li>-v：显示打包文件过程；</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">【例 1】基本使用。  </span><br><span class="line">我们先打包一个文件练练手。  </span><br><span class="line"></span><br><span class="line">`[root@localhost ~]# tar -cvf anaconda-ks.cfg.tar anaconda-ks.cfg  `</span><br><span class="line">#把anacondehks.cfg打包为 anacondehks.cfg.tar文件</span><br><span class="line"></span><br><span class="line">选项&quot;-cvf&quot;一般是习惯用法，记住打包时需要指定打包之后的文件名，而且要用&quot;.tar&quot;作为扩展名。那打包目录呢？我们也试试：  </span><br><span class="line"></span><br><span class="line">[root@localhost ~]# ll -d test/  </span><br><span class="line">drwxr-xr-x 2 root root 4096 6月 17 21:09 test/  </span><br><span class="line">#test是我们之前的测试目录  </span><br><span class="line">[root@localhost ~]# tar -cvf test.tar test/  </span><br><span class="line">test/  </span><br><span class="line">test/test3  </span><br><span class="line">test/test2  </span><br><span class="line">test/test1  </span><br><span class="line">#把目录打包为test.tar文件  </span><br><span class="line">tar命令也可以打包多个文件或目录，只要用空格分开即可。例如:  </span><br><span class="line">[root@localhost ~]# tar -cvf ana.tar anaconda-ks.cfg /tmp/  </span><br><span class="line">#把anaconda-ks.cfg文件和/tmp目录打包成ana.tar文件包</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">【例 2】打包压缩目录。  </span><br><span class="line">我们已经解释过了，压缩命令不能直接压缩目录，我们就先用 tar 命令把目录打成数据包，然后再用 gzip 命令或 bzip2 命令压缩。例如：  </span><br><span class="line"></span><br><span class="line">[root@localhost ~]#ll -d test test.tar  </span><br><span class="line">drwxr-xr-x 2 root root 4096 6月 17 21:09 test  </span><br><span class="line">-rw-r--r-- 1 root root 10240 6月 18 01:06 test.tar  </span><br><span class="line">#我们之前已经把test目录打包成test.tar文件  </span><br><span class="line">[root@localhost ~]# gzip test.tar  </span><br><span class="line">[root@localhost ~]# ll test.tar.gz  </span><br><span class="line">-rw-r--r-- 1 root root 176 6月 18 01:06 test.tar.gz  </span><br><span class="line">#gzip命令会把test.tar压缩成test.tar.gz  </span><br><span class="line">[root@localhost ~]# gzip -d test.tar.gz  </span><br><span class="line">#解压缩，把test.tar.gz解压缩为test.tar  </span><br><span class="line">[root@localhost ~]# bzip2 test.tar  </span><br><span class="line">[root@localhost ~]# ll test.tar.bz2  </span><br><span class="line">-rw-r--r-- 1 root root 164 6月 18 01:06 test.tar.bz2  </span><br><span class="line">#bzip2命令会把test.tar压缩为 test.tar.bz2格式</span><br></pre></td></tr></table></figure>
+<h2 id="解打包命令格式"><a href="#解打包命令格式" class="headerlink" title="解打包命令格式"></a>解打包命令格式</h2><p>“.tar”格式的解打包也需要使用 tar 命令，但是选项不太一样。命令格式如下：  </p>
+<p>[root@localhost ~]#tar [选项] 压缩包</p>
+<p>选项：  </p>
+<ul>
+<li>-x：解打包；</li>
+<li>-f：指定压缩包的文件名；</li>
+<li>-v：显示打包文件过程；</li>
+<li>-t：测试，就是不解打包，只是査看包中有哪些文件；</li>
+<li>-C 目录：指定解打包位置；</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">其实解打包和打包相比，只是把打包选项&quot;-cvf&quot;更换为&quot;-xvf&quot;。我们来试试：  </span><br><span class="line"></span><br><span class="line">[root@localhost ~]# tar -xvf anaconda-ks.cfg. tar  </span><br><span class="line">#解打包到当前目录下</span><br><span class="line"></span><br><span class="line">如果使用&quot;-xvf&quot;选项，则会把包中的文件解压到当前目录下。如果想要指定解压位置，则需要使用&quot;-C(大写)&quot;选项。例如：  </span><br><span class="line"></span><br><span class="line">[root@localhost ~]# tar -xvf test.tar -C /tmp  </span><br><span class="line">#把文件包test.tar解打包到/tmp/目录下</span><br><span class="line"></span><br><span class="line">如果只想査看文件包中有哪些文件，则可以把解打包选项&quot;-x&quot;更换为测试选项&quot;-t&quot;。例如：  </span><br><span class="line"></span><br><span class="line">[root@localhost ~]# tar -tvf test.tar  </span><br><span class="line">drwxr-xr-x root/root 0 2016-06-17 21:09 test/  </span><br><span class="line">-rw-r-r- root/root 0 2016-06-17 17:51 test/test3  </span><br><span class="line">-rw-r-r- root/root 0 2016-06-17 17:51 test/test2  </span><br><span class="line">-rw-r-r- root/root 0 2016-06-17 17:51 test/test1  </span><br><span class="line">#会用长格式显示test.tar文件包中文件的详细信息</span><br></pre></td></tr></table></figure>
+
+<h2 id="“-tar-gz”和”-tar-bz2”-格式"><a href="#“-tar-gz”和”-tar-bz2”-格式" class="headerlink" title="“.tar.gz”和”.tar.bz2” 格式"></a>“.tar.gz”和”.tar.bz2” 格式</h2><p>你可能会觉得 Linux 实在太不智能了，一个打包压缩，居然还要先打包成”.tar”格式，再压缩成”.tar.gz”或”.tar.bz2”格式。其实 tar 命令是可以同时打包压缩的，前面的讲解之所打包和压缩分开，是为了让大家了解在 Linux 中打包和压缩的不同。  </p>
+<p>使用 tar 命令直接打包压缩。命令格式如下：  </p>
+<p><code>[root@localhost ~]#tar [选项] 压缩包 源文件或目录</code></p>
+<p>选项：</p>
+<ul>
+<li>-z：压缩和解压缩 “.tar.gz”格式</li>
+<li>-j：压缩和街压缩 “.tar.bz2”格式</li>
+</ul>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">【例 1】压缩与解压缩 &quot;.tar.gz&quot;格式。  </span><br><span class="line">我们先来看看如何压缩&quot;.tar.gz&quot;格式：  </span><br><span class="line"></span><br><span class="line">[root@localhost ~]# tar -zcvf tmp.tar.gz /tmp/  </span><br><span class="line">#把/temp/目录直接打包压缩为&quot;.tar.gz&quot;格式，通过&quot;-z&quot;来识别格式，&quot;-cvf&quot;和打包选项一致</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">解压缩也只是在解打包选项&quot;-xvf&quot;前面加了一个&quot;-z&quot;选项。  </span><br><span class="line"></span><br><span class="line">[root@localhost ~]# tar -zxvf tmp.tar.gz  </span><br><span class="line">#解压缩与解打包&quot;.tar.gz&quot;格式</span><br><span class="line"></span><br><span class="line">前面讲的选项&quot;-C&quot;用于指定解压位置、&quot;-t&quot;用于査看压缩包内容，在这里同样适用。  </span><br><span class="line">  </span><br><span class="line">【例 2】压缩与解压缩&quot;.tar.bz2&quot;格式。  </span><br><span class="line">和&quot;.tar.gz&quot;格式唯一的不同就是&quot;-zcvf&quot;选项换成了 &quot;-jcvf&quot;。</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# tar -jcvf tmp.tar.bz2 /tmp/  </span><br><span class="line">#打包压缩为&quot;.tar.bz2&quot;格式，注意压缩包文件名  </span><br><span class="line">[root@localhost ~]# tar -jxvf tmp.tar.bz2  </span><br><span class="line">#解压缩与解打包&quot;.tar.bz2&quot;格式</span><br></pre></td></tr></table></figure>
+<p>把文件直接压缩成”.tar.gz”和”.tar.bz2”格式，才是 Linux 中最常用的压缩方式，这是大家一定要掌握的压缩和解压缩方法。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://wei-home.cn/">巍</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/03/10/linux%20learning/tar%E5%91%BD%E4%BB%A4%E7%9A%84%E8%AE%B2%E8%A7%A3%E4%B8%8E%E4%BD%BF%E7%94%A8/">http://example.com/2023/03/10/linux learning/tar命令的讲解与使用/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">巍的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/linux/">linux</a><a class="post-meta__tags" href="/tags/tar/">tar</a></div><div class="post_share"><div class="social-share" data-image="/./img/bg%2008.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/03/10/linux%20learning/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title=""><img class="cover" src="/./img/bg%2004.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2023/03/10/template/post-top/" title=""><img class="cover" src="/./img/bg%2008.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/03/14/command/%E9%87%8D%E5%AE%9A%E5%90%913-14/" title="stdin,stdout,stderr重定向的学习"><img class="cover" src="/./img/bg%2008.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-14</div><div class="title">stdin,stdout,stderr重定向的学习</div></div></a></div><div><a href="/2023/03/10/linux%20learning/appimage%E8%BF%90%E8%A1%8C/" title=""><img class="cover" src="/./img/bg%2003.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-10</div><div class="title"></div></div></a></div><div><a href="/2023/03/10/linux%20learning/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title=""><img class="cover" src="/./img/bg%2004.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-10</div><div class="title"></div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.postimg.cc/CK6xkn3v/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">巍</div><div class="author-info__description">🤯毕业设计ing</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/w-2l"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/w-2l" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:wy_w2l@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">2023.3.2建成巍的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">打包命令格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">解打包命令格式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%80%9C-tar-gz%E2%80%9D%E5%92%8C%E2%80%9D-tar-bz2%E2%80%9D-%E6%A0%BC%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">“.tar.gz”和”.tar.bz2” 格式</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/03/14/command/%E9%87%8D%E5%AE%9A%E5%90%913-14/" title="stdin,stdout,stderr重定向的学习"><img src="/./img/bg%2008.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="stdin,stdout,stderr重定向的学习"/></a><div class="content"><a class="title" href="/2023/03/14/command/%E9%87%8D%E5%AE%9A%E5%90%913-14/" title="stdin,stdout,stderr重定向的学习">stdin,stdout,stderr重定向的学习</a><time datetime="2023-03-14T00:19:01.798Z" title="发表于 2023-03-14 08:19:01">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/14/%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/" title="创建自己的数据流"><img src="/./img/bg%2004.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="创建自己的数据流"/></a><div class="content"><a class="title" href="/2023/03/14/%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/" title="创建自己的数据流">创建自己的数据流</a><time datetime="2023-03-13T16:00:00.000Z" title="发表于 2023-03-14 00:00:00">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/14/command/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%813-14/" title="创建自己的数据流"><img src="/./img/bg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="创建自己的数据流"/></a><div class="content"><a class="title" href="/2023/03/14/command/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%813-14/" title="创建自己的数据流">创建自己的数据流</a><time datetime="2023-03-13T16:00:00.000Z" title="发表于 2023-03-14 00:00:00">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/14/command/%E7%94%B1%E5%BA%93%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E5%87%BD%E6%95%B0/" title="由库执行命令行的函数"><img src="/./img/bg%2001.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="由库执行命令行的函数"/></a><div class="content"><a class="title" href="/2023/03/14/command/%E7%94%B1%E5%BA%93%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E5%87%BD%E6%95%B0/" title="由库执行命令行的函数">由库执行命令行的函数</a><time datetime="2023-03-13T16:00:00.000Z" title="发表于 2023-03-14 00:00:00">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/14/command/%E7%AE%A1%E9%81%933-14/" title="管道"><img src="/./img/bg%2008.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="管道"/></a><div class="content"><a class="title" href="/2023/03/14/command/%E7%AE%A1%E9%81%933-14/" title="管道">管道</a><time datetime="2023-03-13T16:00:00.000Z" title="发表于 2023-03-14 00:00:00">2023-03-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By 巍</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi,welcome my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '7ec58d7dcd003dcb360d',
+      clientSecret: 'ee6934ed455f593439d7c0c7d3b7949ee0878164',
+      repo: 'w-2l.github.io',
+      owner: 'w-2l',
+      admin: ['w-2l'],
+      id: 'dc470b33190c4d713a63b259a0bae4ee',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    getCSS('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css')
+    getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script id="canvas_nest" defer="defer" color="148,0,211" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

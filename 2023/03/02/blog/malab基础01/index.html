@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;en&quot;,&quot;default&quot;]" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Matlab 基础 | 巍的博客</title><meta name="author" content="巍"><meta name="copyright" content="巍"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="常用命令123clear all % 清除workspace中的所有变量clc       % 清除Command Windows中的所有命令 矩阵矩阵建立 要创建包含多行的矩阵，请使用分号分隔各行。1234567a &#x3D; [1 3 5; 2 4 6; 7 8 10]a &#x3D; 3×3     1     3     5     2     4     6     7     8    10 创建矩阵的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab 基础">
+<meta property="og:url" content="http://example.com/2023/03/02/blog/malab%E5%9F%BA%E7%A1%8001/index.html">
+<meta property="og:site_name" content="巍的博客">
+<meta property="og:description" content="常用命令123clear all % 清除workspace中的所有变量clc       % 清除Command Windows中的所有命令 矩阵矩阵建立 要创建包含多行的矩阵，请使用分号分隔各行。1234567a &#x3D; [1 3 5; 2 4 6; 7 8 10]a &#x3D; 3×3     1     3     5     2     4     6     7     8    10 创建矩阵的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.nebrija.com/medios/actualidadnebrija/wp-content/uploads/sites/2/2020/05/Matlab_logo-1024x795.jpg">
+<meta property="article:published_time" content="2023-03-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-14T09:38:25.672Z">
+<meta property="article:author" content="巍">
+<meta property="article:tag" content="Matlab">
+<meta property="article:tag" content="常用命令">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.nebrija.com/medios/actualidadnebrija/wp-content/uploads/sites/2/2020/05/Matlab_logo-1024x795.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/03/02/blog/malab%E5%9F%BA%E7%A1%8001/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?78b0555b46faae03db1e33267d753eb9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Matlab 基础',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-14 17:38:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.postimg.cc/CK6xkn3v/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-podcast"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.nebrija.com/medios/actualidadnebrija/wp-content/uploads/sites/2/2020/05/Matlab_logo-1024x795.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="巍的博客"><img class="site-icon" src="/./img/icon.png"/><span class="site-name">巍的博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-podcast"></i><span> 说说</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Matlab 基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-01T16:00:00.000Z" title="发表于 2023-03-02 00:00:00">2023-03-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-14T09:38:25.672Z" title="更新于 2023-03-14 17:38:25">2023-03-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%85%B6%E5%AE%83%E5%9F%BA%E7%A1%80/">其它基础</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Matlab 基础"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">clear all <span class="comment">% 清除workspace中的所有变量</span></span><br><span class="line">clc       <span class="comment">% 清除Command Windows中的所有命令</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><h3 id="矩阵建立"><a href="#矩阵建立" class="headerlink" title="矩阵建立"></a>矩阵建立</h3><ul>
+<li>要创建包含多行的矩阵，请使用分号分隔各行。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">1</span> <span class="number">3</span> <span class="number">5</span>; <span class="number">2</span> <span class="number">4</span> <span class="number">6</span>; <span class="number">7</span> <span class="number">8</span> <span class="number">10</span>]</span><br><span class="line"></span><br><span class="line">a = <span class="number">3</span>×<span class="number">3</span></span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span>     <span class="number">5</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">4</span>     <span class="number">6</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">8</span>    <span class="number">10</span></span><br></pre></td></tr></table></figure></li>
+<li>创建矩阵的另一种方法是使用 ones、zeros 或 rand 等函数。例如，创建一个由零组成的 5×1 列向量。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">z = <span class="built_in">zeros</span>(<span class="number">5</span>,<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">z = <span class="number">5</span>×<span class="number">1</span></span><br><span class="line"></span><br><span class="line">     <span class="number">0</span></span><br><span class="line">     <span class="number">0</span></span><br><span class="line">     <span class="number">0</span></span><br><span class="line">     <span class="number">0</span></span><br><span class="line">     <span class="number">0</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="矩阵运算"><a href="#矩阵运算" class="headerlink" title="矩阵运算"></a>矩阵运算</h3><ul>
+<li>要转置矩阵，请使用单引号 (‘)：<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a&#x27; <span class="comment">% 必须是方阵</span></span><br></pre></td></tr></table></figure></li>
+<li>矩阵的逆<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p = inv(a)</span><br></pre></td></tr></table></figure></li>
+<li>要执行元素级乘法（而非矩阵乘法），请使用 .* 运算符<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p = a.*a</span><br><span class="line"><span class="comment">% 其它元素级运算也是如此</span></span><br><span class="line">a.^<span class="number">3</span></span><br></pre></td></tr></table></figure></li>
+<li>矩阵串联<br>串联是连接数组以便形成更大数组的过程。<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">A = [a,a]  <span class="comment">% 水平串联</span></span><br><span class="line">A = [a; a] <span class="comment">% 垂直串联</span></span><br><span class="line"></span><br><span class="line">A = <span class="number">3</span>×<span class="number">6</span></span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span>     <span class="number">5</span>     <span class="number">1</span>     <span class="number">3</span>     <span class="number">5</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">4</span>     <span class="number">6</span>     <span class="number">2</span>     <span class="number">4</span>     <span class="number">6</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">8</span>    <span class="number">10</span>     <span class="number">7</span>     <span class="number">8</span>    <span class="number">10</span></span><br><span class="line"></span><br><span class="line">A = <span class="number">6</span>×<span class="number">3</span></span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span>     <span class="number">5</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">4</span>     <span class="number">6</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">8</span>    <span class="number">10</span></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span>     <span class="number">5</span></span><br><span class="line">     <span class="number">2</span>     <span class="number">4</span>     <span class="number">6</span></span><br><span class="line">     <span class="number">7</span>     <span class="number">8</span>    <span class="number">10</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="数组索引"><a href="#数组索引" class="headerlink" title="数组索引"></a>数组索引</h3><p>假设有4x4矩阵A:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A = [<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span>; <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span>; <span class="number">9</span> <span class="number">10</span> <span class="number">11</span> <span class="number">12</span>; <span class="number">13</span> <span class="number">14</span> <span class="number">15</span> <span class="number">16</span>]</span><br><span class="line"></span><br><span class="line">A = <span class="number">4</span>×<span class="number">4</span></span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">2</span>     <span class="number">3</span>     <span class="number">4</span></span><br><span class="line">     <span class="number">5</span>     <span class="number">6</span>     <span class="number">7</span>     <span class="number">8</span></span><br><span class="line">     <span class="number">9</span>    <span class="number">10</span>    <span class="number">11</span>    <span class="number">12</span></span><br><span class="line">    <span class="number">13</span>    <span class="number">14</span>    <span class="number">15</span>    <span class="number">16</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>引用数组中的特定元素有两种方法。最常见的方法是指定行和列下标</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A(<span class="number">4</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> = <span class="number">14</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>要引用多个数组元素，请使用冒号运算符，这使您可以指定一个格式为 <code>start:end</code> 的范围</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A(<span class="number">1</span>:<span class="number">3</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> = <span class="number">3</span>×<span class="number">1</span></span><br><span class="line"></span><br><span class="line">     <span class="number">2</span></span><br><span class="line">     <span class="number">6</span></span><br><span class="line">    <span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>此外，冒号运算符还允许您使用较通用的格式 <code>start:step:end</code> 创建等间距向量值。</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">B = <span class="number">0</span>:<span class="number">10</span>:<span class="number">100</span></span><br><span class="line"></span><br><span class="line">B = <span class="number">1</span>×<span class="number">11</span></span><br><span class="line"></span><br><span class="line">     <span class="number">0</span>    <span class="number">10</span>    <span class="number">20</span>    <span class="number">30</span>    <span class="number">40</span>    <span class="number">50</span>    <span class="number">60</span>    <span class="number">70</span>    <span class="number">80</span>    <span class="number">90</span>   <span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h2><ul>
+<li><p>如果存在多个输入参数，请使用逗号加以分隔</p>
+</li>
+<li><p>如果存在多个输出参数，请将其括在方括号中</p>
+</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">union(A,B)</span><br><span class="line"><span class="built_in">ans</span> = <span class="number">1</span>×<span class="number">5</span></span><br><span class="line"></span><br><span class="line">     <span class="number">1</span>     <span class="number">3</span>     <span class="number">5</span>     <span class="number">6</span>     <span class="number">9</span></span><br><span class="line">[minA,maxA] = bounds(A)</span><br><span class="line">minA = <span class="number">1</span></span><br><span class="line">maxA = <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二维图和三维图"><a href="#二维图和三维图" class="headerlink" title="二维图和三维图"></a>二维图和三维图</h2><h3 id="二维"><a href="#二维" class="headerlink" title="二维"></a>二维</h3><ul>
+<li>要创建二维线图，请使用 <code>plot</code> 函数。例如，绘制在从 0 到 2<em>π</em> 的值组成的线性间距向量上的正弦函数：</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="built_in">linspace</span>(<span class="number">0</span>,<span class="number">2</span>*<span class="built_in">pi</span>);</span><br><span class="line">y = <span class="built_in">sin</span>(x);</span><br><span class="line"><span class="built_in">plot</span>(x,y)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/03/03/9Le23ol1ShcXgjy.png"></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xlabel(<span class="string">&quot;x&quot;</span>)</span><br><span class="line">ylabel(<span class="string">&quot;sin(x)&quot;</span>)</span><br><span class="line">title(<span class="string">&quot;Plot of the Sine Function&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/03/03/xCz9YBs82vOZDEn.png" alt="image-20230303103921426"></p>
+<ul>
+<li>每个设定可包含表示线条颜色、样式和标记的字符。标记是在绘制的每个数据点上显示的符号，例如，<code>+</code>、<code>o</code> 或 <code>*</code>。例如，<code>g:*&quot;</code> 请求绘制使用 <code>*</code> 标记的绿色点线。</li>
+</ul>
+<blockquote>
+<p>请注意，为第一幅绘图定义的标题和标签不再被用于当前的图窗窗口中。默认情况下，每次调用绘图函数、重置坐标区及其他元素以准备新绘图时，MATLAB® 都会清空图窗。要将绘图添加到现有图窗中，请使用 <code>hold on</code>。在使用 <code>hold off</code> 或关闭窗口之前，当前图窗窗口中会显示所有绘图。</p>
+</blockquote>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="built_in">linspace</span>(<span class="number">0</span>,<span class="number">2</span>*<span class="built_in">pi</span>);</span><br><span class="line">y = <span class="built_in">sin</span>(x);</span><br><span class="line"><span class="built_in">plot</span>(x,y)</span><br><span class="line"></span><br><span class="line"><span class="built_in">hold</span> on</span><br><span class="line"></span><br><span class="line">y2 = <span class="built_in">cos</span>(x);</span><br><span class="line"><span class="built_in">plot</span>(x,y2,<span class="string">&quot;:&quot;</span>)</span><br><span class="line"><span class="built_in">legend</span>(<span class="string">&quot;sin&quot;</span>,<span class="string">&quot;cos&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">hold</span> off</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/03/03/t2jsoAxQSlNpLen.png" alt="image-20230303104317055"></p>
+<h3 id="三维"><a href="#三维" class="headerlink" title="三维"></a>三维</h3><p>三维图通常显示一个由带两个变量的函数 <em>z</em>&#x3D;<em>f</em>(<em>x</em>,<em>y</em>) 定义的曲面图。例如，对于给定的行向量和列向量 <code>x</code> 和 <code>y</code>，每个向量包含 [-2,2] 范围内的 20 个点，计算 $z&#x3D;xe^{-x^2-y^2}$ 。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="built_in">linspace</span>(<span class="number">-2</span>,<span class="number">2</span>,<span class="number">20</span>);</span><br><span class="line">y = x&#x27;;</span><br><span class="line">z = x .* <span class="built_in">exp</span>(-x.^<span class="number">2</span> - y.^<span class="number">2</span>);</span><br><span class="line">surf(x,y,z)		<span class="comment">% 创建曲面</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/03/03/O4bgaid12BSXfwQ.png" alt="image-20230303104627133"></p>
+<h3 id="多个绘图"><a href="#多个绘图" class="headerlink" title="多个绘图"></a>多个绘图</h3><p><code>tiledlayout</code> 函数是在 R2019b 中引入的，该函数比 <code>subplot</code> 提供更多对标签和间距的控制。例如，在图窗窗口中创建 2×2 布局。然后，每当您要某个绘图出现在下一区域中时，请调用 <code>nexttile</code>。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">t = tiledlayout(<span class="number">2</span>,<span class="number">2</span>);</span><br><span class="line">title(t,<span class="string">&quot;Trigonometric Functions&quot;</span>)</span><br><span class="line">x = <span class="built_in">linspace</span>(<span class="number">0</span>,<span class="number">30</span>);</span><br><span class="line"></span><br><span class="line">nexttile</span><br><span class="line"><span class="built_in">plot</span>(x,<span class="built_in">sin</span>(x))</span><br><span class="line">title(<span class="string">&quot;Sine&quot;</span>)</span><br><span class="line"></span><br><span class="line">nexttile</span><br><span class="line"><span class="built_in">plot</span>(x,<span class="built_in">cos</span>(x))</span><br><span class="line">title(<span class="string">&quot;Cosine&quot;</span>)</span><br><span class="line"></span><br><span class="line">nexttile</span><br><span class="line"><span class="built_in">plot</span>(x,<span class="built_in">tan</span>(x))</span><br><span class="line">title(<span class="string">&quot;Tangent&quot;</span>)</span><br><span class="line"></span><br><span class="line">nexttile</span><br><span class="line"><span class="built_in">plot</span>(x,<span class="built_in">sec</span>(x))</span><br><span class="line">title(<span class="string">&quot;Secant&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://wei-home.cn/">巍</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/03/02/blog/malab%E5%9F%BA%E7%A1%8001/">http://example.com/2023/03/02/blog/malab基础01/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">此文章版权归巍所有，如有转载，请注明来自原作者</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Matlab/">Matlab</a><a class="post-meta__tags" href="/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">常用命令</a></div><div class="post_share"><div class="social-share" data-image="https://www.nebrija.com/medios/actualidadnebrija/wp-content/uploads/sites/2/2020/05/Matlab_logo-1024x795.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/03/06/linux%20learning/archlinux%E4%B8%8Bdocker%E5%AE%89%E8%A3%85,%E8%AE%BE%E7%BD%AE%E5%AD%98%E5%82%A8%E9%A9%B1%E5%8A%A8%E4%B8%BAoverlay2/" title="archlinux下docker安装,设置存储驱动为overlay2"><img class="cover" src="https://linuxiac.b-cdn.net/wp-content/uploads/2021/03/archlinux.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">archlinux下docker安装,设置存储驱动为overlay2</div></div></a></div><div class="next-post pull-right"><a href="/2023/03/02/blog/matlab%E5%9F%BA%E7%A1%8002/" title="Matlab 基础"><img class="cover" src="https://www.nebrija.com/medios/actualidadnebrija/wp-content/uploads/sites/2/2020/05/Matlab_logo-1024x795.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Matlab 基础</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/03/02/blog/matlab%E5%9F%BA%E7%A1%8002/" title="Matlab 基础"><img class="cover" src="https://www.nebrija.com/medios/actualidadnebrija/wp-content/uploads/sites/2/2020/05/Matlab_logo-1024x795.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-02</div><div class="title">Matlab 基础</div></div></a></div><div><a href="/2023/03/10/linux%20learning/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title=""><img class="cover" src="/./img/bg%2004.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-10</div><div class="title"></div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.postimg.cc/CK6xkn3v/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">巍</div><div class="author-info__description">🤯毕业设计ing</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/w-2l"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/w-2l" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:wy_w2l@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">2023.3.2建成巍的博客</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5"><span class="toc-number">1.1.</span> <span class="toc-text">矩阵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E5%BB%BA%E7%AB%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">矩阵建立</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97"><span class="toc-number">1.1.2.</span> <span class="toc-text">矩阵运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%B4%A2%E5%BC%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">数组索引</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.2.</span> <span class="toc-text">调用函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%92%8C%E4%B8%89%E7%BB%B4%E5%9B%BE"><span class="toc-number">1.3.</span> <span class="toc-text">二维图和三维图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E7%BB%B4"><span class="toc-number">1.3.1.</span> <span class="toc-text">二维</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E7%BB%B4"><span class="toc-number">1.3.2.</span> <span class="toc-text">三维</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E4%B8%AA%E7%BB%98%E5%9B%BE"><span class="toc-number">1.3.3.</span> <span class="toc-text">多个绘图</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/03/14/command/%E9%87%8D%E5%AE%9A%E5%90%913-14/" title="stdin,stdout,stderr重定向的学习"><img src="/./img/bg%2008.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="stdin,stdout,stderr重定向的学习"/></a><div class="content"><a class="title" href="/2023/03/14/command/%E9%87%8D%E5%AE%9A%E5%90%913-14/" title="stdin,stdout,stderr重定向的学习">stdin,stdout,stderr重定向的学习</a><time datetime="2023-03-14T00:19:01.798Z" title="发表于 2023-03-14 08:19:01">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/14/%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/" title="创建自己的数据流"><img src="/./img/bg%2004.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="创建自己的数据流"/></a><div class="content"><a class="title" href="/2023/03/14/%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/" title="创建自己的数据流">创建自己的数据流</a><time datetime="2023-03-13T16:00:00.000Z" title="发表于 2023-03-14 00:00:00">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/14/command/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%813-14/" title="创建自己的数据流"><img src="/./img/bg.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="创建自己的数据流"/></a><div class="content"><a class="title" href="/2023/03/14/command/%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%813-14/" title="创建自己的数据流">创建自己的数据流</a><time datetime="2023-03-13T16:00:00.000Z" title="发表于 2023-03-14 00:00:00">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/14/command/%E7%94%B1%E5%BA%93%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E5%87%BD%E6%95%B0/" title="由库执行命令行的函数"><img src="/./img/bg%2001.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="由库执行命令行的函数"/></a><div class="content"><a class="title" href="/2023/03/14/command/%E7%94%B1%E5%BA%93%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E5%87%BD%E6%95%B0/" title="由库执行命令行的函数">由库执行命令行的函数</a><time datetime="2023-03-13T16:00:00.000Z" title="发表于 2023-03-14 00:00:00">2023-03-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/14/command/%E7%AE%A1%E9%81%933-14/" title="管道"><img src="/./img/bg%2008.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="管道"/></a><div class="content"><a class="title" href="/2023/03/14/command/%E7%AE%A1%E9%81%933-14/" title="管道">管道</a><time datetime="2023-03-13T16:00:00.000Z" title="发表于 2023-03-14 00:00:00">2023-03-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By 巍</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi,welcome my blog!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>(() => {
+  const $mermaidWrap = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaidWrap.length) {
+    window.runMermaid = () => {
+      window.loadMermaid = true
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+      Array.from($mermaidWrap).forEach((item, index) => {
+        const mermaidSrc = item.firstElementChild
+        const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+        const mermaidID = 'mermaid-' + index
+        const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+        mermaid.mermaidAPI.render(mermaidID, mermaidDefinition, (svgCode) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svgCode)
+        })
+      })
+    }
+
+    const loadMermaid = () => {
+      window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+    }
+
+    window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+  }
+})()</script><script>function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: '7ec58d7dcd003dcb360d',
+      clientSecret: 'ee6934ed455f593439d7c0c7d3b7949ee0878164',
+      repo: 'w-2l.github.io',
+      owner: 'w-2l',
+      admin: ['w-2l'],
+      id: '90ebf386f2cae9a3d1f6c19c9832d75a',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    getCSS('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css')
+    getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script id="canvas_nest" defer="defer" color="148,0,211" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
